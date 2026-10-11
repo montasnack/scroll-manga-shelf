@@ -1,0 +1,10 @@
+{
+  "name": "Scroll Manga Shelf",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24-bookworm",
+  "postCreateCommand": "bash scripts/setup.sh",
+  "forwardPorts": [5173, 3001],
+  "portsAttributes": {
+    "5173": { "label": "Manga shelf (development)" },
+    "3001": { "label": "API / production preview" }
+  }
+}
