@@ -29,15 +29,15 @@ SQLiteは `data/shelf.sqlite` に作られます。クラウド作業環境の�
 
 この環境には利用者認証がありません。個人開発用途に留め、共有公開時は認証とデータ分離を追加してください。
 
-## 空のGitHubリポジトリへの初回保存
+## GitHubから取得して開発
 
-GitHub接続にリポジトリ作成権限がない場合は、GitHub上で `scroll-manga-shelf` を **Private / READMEなし** で作成します。接続が選択リポジトリのみを許可する設定なら、この新規リポジトリも許可してください。
-
-ローカルチェックアウトから保存するコマンド:
+公開リポジトリ: https://github.com/montasnack/scroll-manga-shelf
 
 ```bash
-git remote add origin https://github.com/montasnack/scroll-manga-shelf.git
-git push -u origin main
+git clone https://github.com/montasnack/scroll-manga-shelf.git
+cd scroll-manga-shelf
+bash scripts/setup.sh
+npm run dev
 ```
 
-`origin` がすでに設定されている場合は追加不要です。リポジトリ作成・push後、上記のCodex Cloud環境登録に進みます。
+GitHub接続が選択リポジトリのみを許可する設定なら、このリポジトリも接続対象に追加してください。コードの公開はアプリのホスティングとは別です。
